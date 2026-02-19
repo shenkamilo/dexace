@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACEDex • Change Region</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page page-region">
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <header class="topbar sticky container">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">A</span>
+        <div class="brand-text">
+          <strong>ACEDex</strong>
+          <span>Region Switch</span>
+        </div>
+      </div>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+    </header>
+
+    <main class="container main-area">
+      <h1 class="page-title">Change Region</h1>
+
+      <section class="region-layout">
+        <article class="card panel">
+          <div class="panel-head">
+            <h2>Current Region</h2>
+            <span id="statusBadge" class="badge">Not checked</span>
+          </div>
+
+          <dl class="kv-list">
+            <div>
+              <dt>Wallet</dt>
+              <dd>0x7c2A…91F3</dd>
+            </div>
+            <div>
+              <dt>Country</dt>
+              <dd id="currentCountry">🇮🇷 Iran</dd>
+            </div>
+            <div>
+              <dt>Region</dt>
+              <dd id="currentRegion">—</dd>
+            </div>
+            <div>
+              <dt>Estimated fee</dt>
+              <dd id="currentFee">—</dd>
+            </div>
+          </dl>
+
+          <button id="checkRegionBtn" class="btn btn-primary" type="button">Check My Region</button>
+        </article>
+
+        <article class="card panel">
+          <h2>Recommended Countries</h2>
+          <div class="country-list" role="table" aria-label="Recommended countries">
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇨🇭 Switzerland</strong>
+                <span>High stability • Low latency</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.18%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇨🇭 Switzerland" data-region="Switzerland (CH)" data-fee="0.18%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇳🇴 Norway</strong>
+                <span>Reliable routing • Strong infrastructure</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.19%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇳🇴 Norway" data-region="Norway (NO)" data-fee="0.19%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇸🇪 Sweden</strong>
+                <span>Fast settlement • Consistent uptime</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.20%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇸🇪 Sweden" data-region="Sweden (SE)" data-fee="0.20%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇩🇪 Germany</strong>
+                <span>Low congestion • Premium peering</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.21%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇩🇪 Germany" data-region="Germany (DE)" data-fee="0.21%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇳🇱 Netherlands</strong>
+                <span>Efficient routing • Stable throughput</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.22%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇳🇱 Netherlands" data-region="Netherlands (NL)" data-fee="0.22%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇨🇦 Canada</strong>
+                <span>Balanced latency • High reliability</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.23%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇨🇦 Canada" data-region="Canada (CA)" data-fee="0.23%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇺🇸 United States</strong>
+                <span>Dense nodes • Broad availability</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.24%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇺🇸 United States" data-region="United States (US)" data-fee="0.24%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇸🇬 Singapore</strong>
+                <span>Excellent routing • Regional hub</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.26%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇸🇬 Singapore" data-region="Singapore (SG)" data-fee="0.26%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇯🇵 Japan</strong>
+                <span>High performance • Strong failover</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.28%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇯🇵 Japan" data-region="Japan (JP)" data-fee="0.28%" type="button">Select</button>
+              </div>
+            </div>
+            <div class="country-row" role="row">
+              <div class="country-main" role="cell">
+                <strong>🇦🇺 Australia</strong>
+                <span>Resilient infra • Low packet loss</span>
+              </div>
+              <div class="country-meta" role="cell">
+                <span class="country-fee">0.30%</span>
+                <button class="btn btn-small btn-ghost select-region" data-country="🇦🇺 Australia" data-region="Australia (AU)" data-fee="0.30%" type="button">Select</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="how-it-works" class="card panel">
+          <h2>How it works</h2>
+          <ol>
+            <li>Check My Region</li>
+            <li>Pick a recommended country (lower fee = better)</li>
+            <li>Confirm in modal</li>
+          </ol>
+          <p class="soft-note">Demo only: no real wallet interaction is performed.</p>
+        </article>
+      </section>
+    </main>
+
+    <div id="confirmModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+      <div class="modal-backdrop" data-close-modal="true"></div>
+      <div class="modal-content card" tabindex="-1">
+        <h2 id="modalTitle">Confirm Region Switch</h2>
+        <dl class="kv-list modal-kv">
+          <div>
+            <dt>From</dt>
+            <dd id="modalFrom">Unknown</dd>
+          </div>
+          <div>
+            <dt>To</dt>
+            <dd id="modalTo">—</dd>
+          </div>
+          <div>
+            <dt>New fee</dt>
+            <dd id="modalFee">—</dd>
+          </div>
+        </dl>
+        <div class="actions modal-actions">
+          <button id="cancelBtn" class="btn btn-ghost" type="button">Cancel</button>
+          <button id="confirmBtn" class="btn btn-primary" type="button">Confirm Switch</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer container">
+      <span>Demo UI • Not connected to any wallet</span>
+      <span id="year"></span>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
